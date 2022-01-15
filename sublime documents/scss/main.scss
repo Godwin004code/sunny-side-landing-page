@@ -1,0 +1,61 @@
+@import './config';
+@mixin animation {
+    animation-name: animate;
+    animation-timing-function: ease;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.clock {
+    width: 300px;
+    height: 300px;
+    border: 2px solid $primary-color;
+    background-color: $neutral-color;
+    border-radius: 100%;
+    position: relative;
+    
+    #{&}_needle {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: $primary-color;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        z-index: 100;
+
+        &-enter {
+            width: 3px;
+            height: 80px;
+            background-color: red;
+            position: absolute;
+            top: 40%;
+            left: 45%;
+            transform: rotate(340deg);
+            @include animation();
+
+            &-1 {
+                width: 3px;
+                height: 110px;
+                background-color: green;
+                position: absolute;
+                top: 10%;
+                left: 48%;
+                @include animation();
+            }
+            &-2 {
+                width: 3px;
+                height: 80px;
+                background-color: $primary-color;
+                position: absolute;
+                top: 50%;
+                left:50%;
+                transform: rotate(75deg);
+                @include animation();
+            }
+        }
+    }
+}
+@keyframes animate {
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}

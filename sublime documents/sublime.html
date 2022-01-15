@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./basic.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="circle-container">
+            <div class="circle">
+                <button id="open">Open</button>
+                <button id="close">Close</button>
+            </div>
+        </div>
+        <div class="content">
+            <h1>Godwin Alugbin</h1>
+            <small>Ful Stack developer at MICROSOFT</small>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, blanditiis asperiores! Nihil ea amet nesciunt consectetur asperiores maxime quo, alias eos, dolorem similique cupiditate enim. Ex aperiam deserunt veritatis dolorum optio fugiat? Amet id beatae reprehenderit temporibus architecto dicta cupiditate.
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti debitis, soluta voluptas perferendis dicta adipisci tenetur sint iusto a impedit delectus doloremque in repellat id, suscipit illo iste ipsa asperiores aspernatur, possimus commodi neque vel. Asperiores adipisci quis quidem?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, error cumque possimus accusamus, quos architecto modi amet iusto suscipit quisquam eligendi nemo at reiciendis maxime odio ducimus quod quam sapiente dignissimos officia deserunt nam officiis. A pariatur ipsam voluptatibus magnam!
+            </p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </nav>
+    <script>
+        const open = document.getElementById("open")
+        const close = document.getElementById("close")
+        const container = document.querySelector(".container")
+
+        open.addEventListener("click", function() {
+            container.classList.add("active")
+        })
+        close.addEventListener("click", function(){
+            container.classList.remove("active")
+        })
+    </script>
+</body>
+</html>

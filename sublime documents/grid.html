@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>grid-system</title>
+	<style>
+		body {
+			background-color: #272727;
+		}
+		.container {
+			animation: after-3 2s ease 0 infinite alternate both;
+		}
+		@keyframes after-3 {
+			0%{transform: rotate(0);}
+			100%{transform: rotate(720deg);}
+		}
+		 .container::before {
+			content: '';
+			position: absolute;
+			top: 50px;
+			right: 2em;
+			width: 30px;
+			height: 3px;
+			background-color: white;
+			transform: rotate(45deg);
+			animation-name: after;
+			animation-duration: 2s;
+			animation-timing-function: ease;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+		} 
+		.container::after {
+			content: '';
+			position: absolute;
+			top: 50px;
+			right: 2em;
+			width: 30px;
+			height: 3px;
+			background-color: white;
+			transform: rotate(-45deg);
+			animation-name: after;
+			animation-duration: .5s;
+			animation-timing-function: ease;
+			animation-iteration-count: infinite;
+			animation-direction: normal;
+		}
+		.needle {
+			height: 100px;
+			width: 4px;
+			background-color: white;
+			position: absolute;
+			top: 53px;
+			right: 45px;
+
+		}
+		@keyframes after {
+			0%{transform: rotate(0);}
+			100%{transform: rotate(720deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	</div>
+	<div class="needle"></div>
+	<script>
+		const btn = document.querySelector('.container').addEventListener('click', () => {
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 100%;
+  position: relative;
+}
+
+.clock .clock_needle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  z-index: 100;
+}
+
+.clock .clock_needle-enter {
+  width: 3px;
+  height: 80px;
+  background-color: red;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: rotate(340deg);
+  animation-name: animate;
+  animation-timing-function: ease;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.clock .clock_needle-enter-1 {
+  width: 3px;
+  height: 110px;
+  background-color: green;
+  position: absolute;
+  top: 10%;
+  left: 48%;
+  animation-name: animate;
+  animation-timing-function: ease;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.clock .clock_needle-enter-2 {
+  width: 3px;
+  height: 80px;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(75deg);
+  animation-name: animate;
+  animation-timing-function: ease;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */
